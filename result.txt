@@ -1,0 +1,25 @@
+ GPU isn't used 
+mini_batch = 1, batch = 1, time_steps = 1, train = 0 
+
+ seen 64, trained: 32013 K-images (500 Kilo-batches_64) 
+../roza.jpg: Predicted in 25635.278000 milli-seconds.
+person: 74%
+person: 25%
+person: 34%
+person: 75%
+person: 85%
+person: 77%
+person: 85%
+person: 31%
+person: 35%
+person: 30%
+person: 47%
+person: 53%
+person: 38%
+person: 62%
+person: 42%
+person: 29%
+person: 71%
+person: 63%
+person: 86%
+person: 31%
