@@ -49,12 +49,13 @@ def make_public_cam(cam):
             new_cam['uri'] = url_for('get_cam', cam_id=cam['id'], _external=True)
         else:
             new_cam[field] = cam[field]
+        new_cam['people'] = script.count_people(cam['cam_url'])
     return new_cam
 
 
 @app.route('/cameras', methods=['GET'])
 def get_cameras():
-    return jsonify({'cameras': [make_public_cam(cam) for cam in cameras]})
+    return jsonify([make_public_cam(cam) for cam in cameras])
 
 
 @app.route('/')
