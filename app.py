@@ -36,7 +36,7 @@ def get_cam(cam_id):
     new_cam = {}
     for field in cam[0]:
         if field == 'cam_url':
-            new_cam['people'] = script.count_people(cam[0]['cam_url'])
+            new_cam['people'] = script.count_people(cam[0]['cam_url'], cam[0]['id'])
         else:
             new_cam[field] = cam[0][field]
     return jsonify({'cam': new_cam})
@@ -49,7 +49,7 @@ def make_public_cam(cam):
             new_cam['uri'] = url_for('get_cam', cam_id=cam['id'], _external=True)
         else:
             new_cam[field] = cam[field]
-        new_cam['people'] = script.count_people(cam['cam_url'])
+        new_cam['people'] = script.count_people(cam['cam_url'], cam['id'])
     return new_cam
 
 
