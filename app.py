@@ -45,11 +45,9 @@ def get_cam(cam_id):
 def make_public_cam(cam):
     new_cam = {}
     for field in cam:
-        if field == 'id':
-            new_cam['uri'] = url_for('get_cam', cam_id=cam['id'], _external=True)
-        else:
-            new_cam[field] = cam[field]
+        new_cam[field] = cam[field]
         new_cam['people'] = script.count_people(cam['cam_url'])
+        new_cam['uri'] = url_for('get_cam', cam_id=cam['id'], _external=True)
     return new_cam
 
 
