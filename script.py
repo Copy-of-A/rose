@@ -20,5 +20,5 @@ def count_people(url, cam_id):
     f.close()
     os.remove("shots/camera_" + cam_id + ".jpg")
     os.remove("shots/result_" + cam_id + ".txt")
-    # return urls_stub.get(url)
-    return people_count
+    return urls_stub.get(url)
+    # return people_count
