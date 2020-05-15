@@ -4,4 +4,6 @@ itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 Werkzeug==1.0.1
-ffmpy~=0.2.3
+numpy~=1.18.4
+opencv-python~=4.2.0.34
+imutils~=0.5.3

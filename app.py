@@ -36,7 +36,7 @@ def get_cam(cam_id):
     new_cam = {}
     for field in cam[0]:
         if field == 'cam_url':
-            new_cam['people'] = script.count_people(cam[0]['cam_url'])
+            new_cam['people'] = script.count_people(cam[0]['cam_url'], cam_id)
         else:
             new_cam[field] = cam[0][field]
     return jsonify({'cam': new_cam})
