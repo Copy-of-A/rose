@@ -1,6 +1,7 @@
 import os
 import time
 # import imutils as imutils
+import cv2
 from cv2 import *
 urls_stub = {
     'https://sochi.camera:8081/cam_242/video.m3u8': 10,
